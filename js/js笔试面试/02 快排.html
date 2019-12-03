@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+var quickSort = function(arr) {
+
+    if (arr.length <= 1) { return arr; }
+
+    var pivotIndex = Math.floor(arr.length / 2);
+  //  console.log(pivotIndex);
+
+   var pivot = arr.splice(pivotIndex,1)[0];
+     //console.log(pivot);
+
+    var left = [];
+
+    var right = [];
+
+    for (var i = 0; i < arr.length; i++){
+
+        if (arr[i] < pivot) {
+
+            left.push(arr[i]);
+
+        } else {
+
+            right.push(arr[i]);
+
+        }
+
+    }
+
+    return quickSort(left).concat(pivot, quickSort(right));
+
+};
+var arr=[50,40,69,54,21,150,30];
+console.log(quickSort(arr));
+</script>
+</body>
+</html>

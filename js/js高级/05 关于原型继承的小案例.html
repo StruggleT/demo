@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //通过改变原型指向来实现继承
+    //动物：姓名，体重，吃东西的行为
+    //狗：姓名，体重，颜色，吃东西的行为，咬人的行为
+    //二哈：姓名，体重，颜色，性别，吃东西的行为，咬人的行为，拆家的行为
+    function Animal(name,weight) {
+        this.name=name;
+        this.weight=weight;
+    }
+    Animal.prototype.eat=function () {
+        console.log("吃东西");
+    };
+    function Dog(color) {
+        this.color=color;
+    }
+    //改变狗的原型指向
+    Dog.prototype=new Animal("小黑",100);
+    Dog.prototype.bite=function () {
+      console.log("咬了");
+    };
+    function erHa(sex) {
+        this.sex=sex;
+    }
+    //改变二哈的原型指向
+    erHa.prototype=new Dog("green");
+    erHa.prototype.demolition=function () {
+      console.log("拆了家");
+    };
+    var er=new erHa("男");
+    console.log(er.name,er.sex,er.weight,er.color);
+    er.bite();
+    er.eat();
+    er.demolition();
+
+
+</script>
+</body>
+</html>

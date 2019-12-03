@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            background: #ccc;
+        }
+
+        label {
+            width: 40px;
+            display: inline-block;
+        }
+
+        span {
+            color: red;
+        }
+
+        .container {
+            margin: 100px auto;
+            width: 400px;
+            padding: 50px;
+            line-height: 40px;
+            border: 1px solid #999;
+            background: #efefef;
+        }
+
+        span {
+            margin-left: 30px;
+            font-size: 12px;
+        }
+
+        .wrong {
+            color: red
+        }
+
+        .right {
+            color: green;
+        }
+
+        .defau {
+            width: 200px;
+            height: 20px;
+        }
+
+        .de1 {
+            background-position: 0 -20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="dv">
+    <!--    label标签的作用是点击QQ或者手机字的时候，光标自动到文本框里-->
+    <label for="qq">Q Q</label><input type="text" id="qq"><span></span><br/>
+    <label for="phone">手机</label><input type="text" id="phone"><span></span><br/>
+    <label for="e-mail">邮箱</label><input type="text" id="e-mail"><span></span><br/>
+    <label for="telephone">座机</label><input type="text" id="telephone"><span></span><br/>
+    <label for="fullName">姓名</label><input type="text" id="fullName"><span></span><br/>
+</div>
+<script src="common.js"></script>
+<script>
+    //获取每个input标签，调用函数。
+    checkValue(my$("qq"), /^\d{5,10}$/);
+    checkValue(my$("phone"), /^\d{11}$/);
+    checkValue(my$("e-mail"), /^[0-9a-zA-Z_.-]+[@][0-9a-zA-Z_.-]+([.][a-zA-Z]+){1,2}$/);
+    checkValue(my$("telephone"), /^[0-9]{3,4}[-][0-9]{6}$/);
+    checkValue(my$("fullName"), /^[\u4e00-\u9fa5]{2,6}$/);
+
+
+    //把输入input里的值拿来与对应的正则表达式作比较
+    function checkValue(input, reg) {
+        input.onblur = function () {
+            if (reg.test(this.value)) {
+                this.nextElementSibling.innerHTML = "正确";
+                this.nextElementSibling.className = "right";
+            } else {
+                this.nextElementSibling.innerHTML = "请输入正确的格式";
+                this.nextElementSibling.className = "wrong";
+            }
+        };
+
+    }
+
+</script>
+</body>
+</html>

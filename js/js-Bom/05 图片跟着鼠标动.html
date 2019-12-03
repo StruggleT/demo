@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<img src="images/angle.gif" alt="" id="angle">
+<script src="common.js"></script>
+<script>
+    my$("angle").onclick = function () {
+
+        document.onmousemove = function (ev) {
+            //可视区域横坐标和纵坐标
+           my$("angle").style.left = ev.clientX + "px";
+           my$("angle").style.top = ev.clientY + "px";
+        };
+    };
+    // my$("angle").onmouseout = function () {
+    //
+    // }
+</script>
+</body>
+</html>

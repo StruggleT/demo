@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.slim.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                if (/^[\u4e00-\u9fa5]{2,6}$/.test($("#txt").val())){
+                    $("#txt").css("background","green");
+                }
+                else {
+                    $("#txt").css("background","red");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+请输入中文：<input type="text" id="txt">
+<input type="button" id="btn" value="按钮">
+</body>
+</html>

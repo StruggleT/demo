@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+
+</div>
+<script>
+    var box=document.getElementById("box");
+    box.onmouseover =function () {
+        this.style.backgroundColor="red";
+    }
+    box.onmouseout=function () {
+        this.style.backgroundColor="yellow";
+    }
+</script>
+</body>
+</html>

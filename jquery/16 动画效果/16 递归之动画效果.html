@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 150px;
+            height: 150px;
+            vertical-align: top;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $("#btn2").click(function () {
+                $("#dv>img:last").hide(500,function f1() {
+                    $(this).prev("img").hide(500,f1);
+                })
+            });
+
+            $("#btn1").click(function (){
+                $("#dv>img:first").show(500,function f2() {
+                    $(this).next("img").show(500,f2);
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" id="btn1" value="显示">
+<input type="button" id="btn2" value="隐藏">
+<div id="dv">
+    <img src="images/1.jpg" alt="">
+    <img src="images/2.jpg" alt="">
+    <img src="images/3.jpg" alt="">
+    <img src="images/4.jpg" alt="">
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>post提交</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>用户名</td>
+			<td><input type="text" name="username" id="username"></td>
+		</tr>
+		<tr>
+			<td>密码</td>
+			<td><input type="password" name="password" id="password"></td>
+		</tr>
+		<tr id='tr'>
+			<td></td>
+			<td><button id="btn">提交</button></td>
+		</tr>
+	</table>
+	<script>
+		var btn = document.getElementById('btn')
+		var txtUsername = document.getElementById('username')
+   		var txtPassword = document.getElementById('password')
+   		var trObj = document.getElementById('tr')
+		btn.onclick = function () {
+			var username = txtUsername.value
+			var password = txtPassword.value
+			var xhr =new  XMLHttpRequest()
+
+			xhr.open('POST','login.php')
+
+			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
+			xhr.send('username='+username+'&password='+password)
+
+			xhr.onreadystatechange = function () {
+				if (this.readyState!== 4 ) return
+					
+					//console.log(this.responseText)
+				var td = document.createElement('td')
+
+				td.innerHTML = this.responseText
+
+				trObj.appendChild(td)
+
+				td.style.border = '1px solid red'
+			}
+
+		}
+
+	</script>
+</body>
+</html>

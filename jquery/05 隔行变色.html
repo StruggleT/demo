@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+    <script src="jquery-3.4.1.slim.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $("#uu>li:odd").css("backgroundColor","red");
+                $("#uu>li:even").css("backgroundColor","yellow");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="点击" id="btn">
+<div>
+    <ul id="uu">
+        <li>1111111111</li>
+        <li>22222222222222222</li>
+        <li>22222222222222222</li>
+        <li>22222222222222222</li>
+        <li>22222222222222222</li>
+        <li>22222222222222222</li>
+        <li>22222222222222222</li>
+        <li>22222222222222222</li>
+    </ul>
+</div>
+</body>
+</html>

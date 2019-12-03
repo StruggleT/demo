@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #dv {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn" value="点击按钮">
+<div id="dv"></div>
+<script src="common.js"></script>
+<script>
+    //自定义构造函数
+    function Person(btnObj, dvObj, json) {
+        this.btnObj = btnObj;
+        this.dvObj = dvObj;
+        this.json=json;
+    }
+
+    //通过原型创建方法
+    Person.prototype.init = function () {
+        var that = this;
+        that.btnObj.onclick = function () {
+            for (var key in that.json) {
+                that.dvObj.style[key] = that.json[key];
+            }
+        }
+    };
+    //实例化对象
+    var json = {"width": "500px", "height": "500px", "opacity": "0.2", "backgroundColor": "pink"};
+    var cs = new Person(my$("btn"), my$("dv"), json);
+    cs.init();//调用方法
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab {
+            width: 400px;
+            height: 400px;
+            margin: 100px auto;
+        }
+
+        .hd span {
+            /*border: 1px solid red;*/
+            margin-right: 60px;
+            background-color: pink;
+            cursor: pointer;
+        }
+
+        .hd .current {
+            background-color: purple;
+        }
+
+        .bd {
+            height: 300px;
+            background-color: purple;
+        }
+
+        .bd ul {
+            list-style: none;
+        }
+
+        .bd ul li {
+
+            display: none;
+        }
+
+        .bd .current {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="tab" id="tab">
+    <div class="hd">
+        <span class="current">新闻</span>
+        <span>媒体</span>
+        <span>娱乐</span>
+        <span>体育</span>
+    </div>
+    <div class="bd">
+        <ul>
+            <li class="current">我是新闻</li>
+            <li>我是媒体</li>
+            <li>我是娱乐</li>
+            <li>我是体育</li>
+        </ul>
+    </div>
+</div>
+<script src="common.js"></script>
+<script>
+    var tabObj = my$("tab");
+    var hd = tabObj.getElementsByTagName("div")[0];
+    var bd = tabObj.getElementsByTagName("div")[1];
+    var spans = hd.getElementsByTagName("span");
+    var list=bd.getElementsByTagName("li");
+    for (var i = 0; i < spans.length; i++) {
+        //设置索引index属性，保存值(要在点击之前保存索引)
+        // spans[i].setAttribute("index",i);
+        spans[i].index=i;
+        spans[i].onclick = function () {
+            //第一步 先清除所有的span类属性
+            for (var j = 0; j < spans.length; j++) {
+                // spans[j].removeAttribute("class");
+                spans[j].className="";
+                list[j].removeAttribute("class");
+            }
+            //第二步 当前被点击的span应用类属性
+            this.className = "current";
+            //获取被点击时的索引值
+            // var num = this.getAttribute("index");
+            list[this.index].className="current";
+        };
+
+    }
+</script>
+</body>
+</html>

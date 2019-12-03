@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function getZhiShu(n) {
+        if (n === 1) {
+            return false;
+        }
+        for (var i = 2; i < n; i++) {
+            if (n % i === 0) {
+                return false;
+            }
+        }
+        return n;
+    }
+
+    function getZhiShuSum(k) {
+        var sum = 0;
+        for (var j = 1; j <= k; j++) {
+            sum += getZhiShu(j);
+        }
+        return sum;
+    }
+
+    console.log(getZhiShuSum(20));
+
+
+</script>
+</body>
+</html>

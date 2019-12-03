@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax的请求</title>
+</head>
+<body>
+	<script>
+	//1.用户代理
+	var xhr = new XMLHttpRequest()
+	//2.打开浏览器，输入网址
+	xhr.open('GET','http://day4.io/time.php')
+	//3.敲回车，发送请求
+	xhr.send()
+	//4.获取响应
+	// xhr.onreadystatechange = function () {
+	// 	if (this.readyState!==4) return
+	// 		console.log(this.responseText)
+	// }
+	xhr.addEventListener('readystatechange',function () {
+		if (this.readyState!==4) return
+			console.log(this.responseText)
+	})
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .map {
+            width: 800px;
+            height: 800px;
+            /*渐变*/
+            background: linear-gradient(to bottom, rgb(10, 10, 50) 10%, rgb(60, 10, 60) 100%);
+            position: relative;
+        }
+
+        input {
+            width: 80px;
+            height: 40px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="开始游戏" id="btn">
+<div class="map"></div>
+<script src="food.js"></script>
+<script src="snake.js"></script>
+<script src="game.js"></script>
+<script>
+    //产生随机数对象
+    // (function (window) {
+    //     function Random() {
+    //
+    //     }
+    //
+    //     Random.prototype.getRandom = function (min, max) {
+    //         return Math.floor(Math.random() * (max - min) + min);
+    //     };
+    //     window.Random = new Random();
+    // })(window);
+    //测试代码
+    // console.log(Random.getRandom(0,5));
+
+
+
+
+    //初始化游戏对象
+    document.getElementById("btn").onclick = function () {
+        var gm = new Game(document.querySelector(".map"));
+
+        //初始化游戏---开始游戏
+        gm.init();
+
+    };
+
+    //实例化对象
+    // var fd = new Food();
+    // fd.init(map);
+    // var sk = new Snake();
+    //
+    //  setInterval(function () {
+    //    sk.move(document.querySelector(".map"));
+    //    sk.init(document.querySelector(".map"));
+    //  }, 150);
+
+    // //测试代码
+    // console.log(fd.x + "====" + fd.y);
+</script>
+</body>
+</html>

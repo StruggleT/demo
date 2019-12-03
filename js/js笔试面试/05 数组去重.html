@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function unique3(arr) {
+        var temp = {}, len = arr.length;
+        for(var i=0; i < len; i++)  {
+            var tmp = arr[i];
+            if(!temp.hasOwnProperty(tmp)) {
+                temp[arr[i]] = "my god";
+            }
+        }
+
+        len = 0;
+        var tempArr=[];
+        for(var i in temp) {
+            tempArr[len++] = i;
+        }
+        return tempArr;
+    }
+    var arr=[10,20,20,20,65,20,10];
+    var x=unique3(arr);
+    console.log(arr);
+
+
+</script>
+</body>
+</html>

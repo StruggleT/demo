@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+
+		}
+		
+		div{
+			border: 10px solid skyblue;
+			padding: 50px;
+			width: 600px;
+			height: 600px;
+			background-color: red;
+			margin-left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="dv"></div>
+	<script>
+		var a =document.getElementById('dv')
+		function add() {
+			console.log(a.clientWidth)
+		}
+		a.addEventListener('click',add,false);
+
+		// document.getElementById('dv').removeEventListener('click',add,false)
+	</script>
+</body>
+</html>

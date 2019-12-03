@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax的封装</title>
+</head>
+<body>
+	<script>
+		// var xhr = new XMLHttpRequest()
+
+		// xhr.open('GET','time.php')
+
+		// xhr.send(null)
+
+		// xhr.onreadystatechange = function () {
+		// 	if (this.readyState !== 4) return
+		// 		console.log(this.responseText)
+		// }
+
+		function ajax(method,url) {
+
+		method = method.toUpperCase()
+		var xhr = new XMLHttpRequest()
+
+		xhr.open(method,url)
+
+		xhr.send(null)
+
+		xhr.onreadystatechange = function () {
+			if (this.readyState !== 4) return
+				console.log(this.responseText)
+		}
+
+		}
+		ajax('get','time.php')
+
+	</script>
+</body>
+</html>

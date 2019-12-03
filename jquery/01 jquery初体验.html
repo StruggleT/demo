@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    $(function() {
+    var json = [ {
+        "id" : "1",
+        "tagName" : "apple"
+    }, {
+        "id" : "2",
+        "tagName" : "orange"
+    }, {
+        "id" : "3",
+        "tagName" : "banana"
+    }, {
+        "id" : "4",
+        "tagName" : "watermelon"
+    }, {
+        "id" : "5",
+        "tagName" : "pineapple"
+    } ];
+
+    $.each(json, function(idx, obj) {
+        console.log(obj.tagName);
+    });
+});
+
+</script>
+</body>
+</html>

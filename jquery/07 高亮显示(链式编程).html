@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+            cursor: pointer;
+        }
+    </style>
+    <script src="jquery-3.4.1.slim.js"></script>
+    <script>
+        // $(function () {
+        //     $("#uu>li").mouseenter(function () {
+        //         $(this).css("backgroundColor","red");
+        //     });
+        //     $("#uu>li").mouseleave(function () {
+        //         $(this).css("backgroundColor","");
+        //     });
+        // });
+        // $(function () {
+        //     $("#uu>li").click(function () {
+        //         $(this).css("background","yellow");
+        //         $(this).css("fontSize","30px");
+        //         $(this).css("fontFamily","全新硬笔行书简");
+        //     });
+        // });
+
+
+        $(function () {
+            $("#uu>li").mouseenter(function () {
+                $(this).css("backgroundColor","red");
+            }).mouseleave(function () {
+                $(this).css("backgroundColor","");
+            }).click(function () {
+                $(this).css("color","yellow").css("fontSize","30px").css("fontFamily","全新硬笔行书简");
+            });
+        });
+
+    </script>
+</head>
+<body>
+<ul id="uu">
+    <li>随机数计算机2019年9月16日 20:23:57静静</li>
+    <li>随机数计算机2019年9月16日 20:23:57静静</li>
+    <li>随机数计算机2019年9月16日 20:23:57静静</li>
+    <li>随机数计算机2019年9月16日 20:23:57静静</li>
+    <li>随机数计算机2019年9月16日 20:23:57静静</li>
+    <li>随机数计算机2019年9月16日 20:23:57静静</li>
+    <li>随机数计算机2019年9月16日 20:23:57静静</li>
+    <li>随机数计算机2019年9月16日 20:23:57静静</li>
+<!--    <script>-->
+<!--        var ulObj=document.getElementById("uu");-->
+<!--        var liObj=ulObj.children;-->
+<!--        for (var i=0;i<liObj.length;i++){-->
+<!--            liObj[i].onmouseover=function () {-->
+<!--                this.style.backgroundColor="red";-->
+<!--            };-->
+<!--            liObj[i].onmouseout =function () {-->
+<!--                this.style.backgroundColor="";-->
+<!--            };-->
+<!--            liObj[i].onclick=function () {-->
+<!--              this.style.backgroundColor="yellow";-->
+<!--            };-->
+<!--        }-->
+
+<!--    </script>-->
+</ul>
+</body>
+</html>

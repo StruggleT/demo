@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //练习：不要使用JavaScript内置的parseInt()函数，利用map和reduce操作实现一个string2int()函数：
+    // 'use strict';
+    //
+    // function string2int(s) {
+    //    var arr=s.split(",");
+    //    var ff=arr.map(function (x) {
+    //        return x-0;
+    //    });
+    //     var result=ff.reduce(function (x,y) {
+    //         return x*10+y;
+    //     });
+    //     return result;
+    // }
+    // string2int("12345");
+    //
+    // // 测试:
+    // if (string2int('0') === 0 && string2int('12345') === 12345 && string2int('12300') === 12300) {
+    //     if (string2int.toString().indexOf('parseInt') !== -1) {
+    //         console.log('请勿使用parseInt()!');
+    //     } else if (string2int.toString().indexOf('Number') !== -1) {
+    //         console.log('请勿使用Number()!');
+    //     } else {
+    //         console.log('测试通过!');
+    //     }
+    // }
+    // else {
+    //     console.log('测试失败!');
+    // }
+    //请把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字。输入：['adam', 'LISA', 'barT']，输出：['Adam', 'Lisa', 'Bart']
+    'use strict';
+
+    function normalize(arr) {
+        return arr.map(function(s) {
+            return s.substring(0, 1).toUpperCase() + s.substring(1).toLowerCase();
+        })
+    }
+    normalize(['adam', 'LISA', 'barT']);
+    // 测试:
+    if (normalize(['adam', 'LISA', 'barT']).toString() === ['Adam', 'Lisa', 'Bart'].toString()) {
+        console.log('测试通过!');
+    }
+    else {
+        console.log('测试失败!');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //第一种：字面量创建对象
+    var Person = {"width":"500px","height":"500px"};
+    console.dir(Person);
+    //第二种：构造函数创建对象
+    function Animal() {
+        this.age=27;
+        this.name="alex";
+        this.eat = function () {
+          alert("吃了");
+        }
+    }
+    var anim=new Animal();
+    anim.eat();
+    //第三种：工厂模式创建对象
+    function creatObject() {
+        var obj = new Object();
+        obj.age=20;
+        obj.name="echo";
+        return obj;
+    }
+    var per=creatObject();
+    console.log(per.age);
+</script>
+</body>
+</html>

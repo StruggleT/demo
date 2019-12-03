@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3d5931dd-f98d-48b3-bbd8-ae5ac4bd253b" name="默认的" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1OdDSR6oOxbxmF6gT9zNXJtHIfM" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js-Bom" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Desktop\60天\js day1" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.03 质素.html">
+    <configuration name="01 js介绍.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/js day1/01 js介绍.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="03 质素.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/js day1/03 质素.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.03 质素.html" />
+        <item itemvalue="JavaScript Debug.01 js介绍.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d5931dd-f98d-48b3-bbd8-ae5ac4bd253b" name="默认的" comment="" />
+      <created>1564298579749</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564298579749</updated>
+      <workItem from="1564298580988" duration="7332000" />
+      <workItem from="1564403563202" duration="3129000" />
+      <workItem from="1564470715940" duration="11528000" />
+      <workItem from="1564559777242" duration="613000" />
+      <workItem from="1564904858354" duration="1191000" />
+      <workItem from="1565057519826" duration="1981000" />
+      <workItem from="1565524207698" duration="5092000" />
+      <workItem from="1565572217106" duration="14320000" />
+      <workItem from="1565663890977" duration="5925000" />
+      <workItem from="1565744715097" duration="20585000" />
+      <workItem from="1565836430691" duration="234000" />
+      <workItem from="1565857399154" duration="8590000" />
+      <workItem from="1567497583981" duration="566000" />
+      <workItem from="1567594969738" duration="3976000" />
+      <workItem from="1567644110402" duration="1194000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

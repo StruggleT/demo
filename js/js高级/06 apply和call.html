@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(age,name) {
+        this.age=age;
+        this.name=name;
+    }
+    Person.prototype.sayHi=function (x,y) {
+      console.log("哈哈"+(x+y)+"===========>"+this.sex);
+    };
+    function Student(sex,age,name) {
+        this.sex=sex;
+        Person.apply(this,[age,name]);
+    }
+    var per=new Person(10,"小明");
+    var stu=new Student("男",100,"小王");
+    per.sayHi.apply(stu,[10,20]);
+    per.sayHi.call(stu,10,20);
+    console.log("===========");
+    console.log(stu);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p>这是一个DOM树的遍历</p>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div>
+    <span></span>
+    <em></em>
+    <i></i>
+</div>
+<script>
+    //获取页面的根节点
+    //根据根节点,调用fn的函数,显示的是根节点的名字
+    var root=document.documentElement;
+    //循环遍历DOM树
+    function forDom(root1) {
+        //获取根节点下的所有子节点
+        var children=root1.children;
+        //调用遍历所有子节点的函数
+        forChildren(children);
+    }
+    //给我所有的子节点,我把这个子节点中的所有的子节点显示出来
+    function forChildren(children) {
+        for (var i=0;i<children.length;i++){
+            var child=children[i];
+            f1(child);//显示节点名字
+            //判断child下面有没有子节点,如果还有子节点,那么就继续的遍历
+            child.children&&forDom(child);//递归
+        }
+
+    }
+    forDom(root);
+    //显示节点名字
+    function f1(node) {
+        console.log("节点的名字："+node.nodeName);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function Person(age) {
+    //     this.age=age;
+    // }
+    // Person.prototype.eat=function () {
+    //   console.log("吃了"+"==========>"+this.age);
+    // };
+    // function Student(age) {
+    //     this.age=age;
+    // }
+    // var per=new Person(10);
+    // var stu=new Student(100);
+    // var ff=per.eat.bind(stu);
+    // ff();
+    function ShowRandom() {
+        this.numeber=parseInt(Math.random()*10+1);
+    }
+    ShowRandom.prototype.show1=function () {
+        var that=this;
+        window.setInterval(function () {
+            this.show2();
+        }.bind(that),1000);
+    };
+    ShowRandom.prototype.show2=function () {
+      console.log(this.numeber);
+    };
+    var num=new ShowRandom();
+    num.show1();//
+    num.show2();
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            list-style: none
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 1150px;
+            height: 400px;
+            margin: 50px auto;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+
+        div li {
+            width: 240px;
+            height: 400px;
+            float: left;
+        }
+
+        div ul {
+            width: 1300px;
+        }
+
+
+    </style>
+    <script src="jquery-3.4.1.slim.js"></script>
+    <script>
+        $(function () {
+            $("ul>li").mouseenter(function () {
+              $(this).css("width","800px").siblings("li").css("width","100px");
+            }).mouseleave(function () {
+                $(this).parent().find("li").css("width","240px");
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><img src="images/1.jpg"/></li>
+        <li><img src="images/2.jpg"/></li>
+        <li><img src="images/3.jpg"/></li>
+        <li><img src="images/4.jpg"/></li>
+        <li><img src="images/5.jpg"/></li>
+    </ul>
+</div>
+</body>
+</html>

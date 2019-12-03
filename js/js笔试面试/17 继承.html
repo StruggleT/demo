@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		// 原型链继承
+		// function Parent() {
+		// 	this.name = 'cc',
+		// 	this.arr = ['ssa','ttt']
+
+		// }
+
+		// function Son() {
+			
+		// }
+
+		// Son.prototype = new Parent()
+
+		// var son = new Son()
+
+		// son.name = 'gg'
+
+		// son.arr.push('llll')
+
+		// console.log(son.arr +'========='+ son.name)
+
+		// var son2 = new Son()
+
+		// console.log(son2.arr +'========='+ son2.name )
+
+		// 借用构造函数继承
+			// function Parent(name) {
+			// 	this.name = name,
+			// 	this.arr = ['ssa','ttt']
+
+			// }
+
+			// function Son(age) {
+
+			// 	Parent.call(this,'cc')
+
+			// 	this.age = age
+			
+			// }
+			// var son = new Son(20)
+
+			// console.log(son.age+'========'+ son.name)
+		
+		// 组合继承
+			// function Parent() {
+			// this.name = 'cc',
+			// this.arr = ['ssa','ttt']
+
+			// }
+			// Parent.prototype.sayHi = function () {
+			// 	console.log('hihi')
+			// }
+
+			// function Son() {
+			// 	Parent.call(this)
+			// }
+
+			// Son.prototype = new Parent()
+
+			// var son1 = new Son()
+
+			// son1.name = 'gg'
+
+			// son1.arr.push('ooooo')
+
+			// console.log(son1.arr +'========'+ son1.name)
+
+			// var son2 = new Son()
+
+			// console.log(son2.arr+'========'+ son2.name)
+			
+		// 原型式继承
+		
+		// function object(o) {
+		// 	function F() {
+			
+		// 	}
+		// 	F.prototype = o
+
+		// 	return new F()
+		// }
+
+		// var a = {
+		// 	value : 1,
+		// 	sayHi:function () {
+		// 		console.log('ss')
+		// 	}
+
+		// }
+		// var person = object(a)
+
+		// console.log(person.value)
+		// person.sayHi()
+		
+		// 寄生继承
+		function createObj(o) {
+			var clone = Object.create(o)
+			clone.sayHi = function () {
+				console.log('ss')
+			}
+			return clone
+		}
+
+	</script>
+</body>
+</html>

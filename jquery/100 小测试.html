@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // var color = "red";
+    // function outer() {
+    //     var anotherColor = "blue";
+    //
+    //     function inner() {
+    //         var tmpColor = color;
+    //         color = anotherColor;
+    //         anotherColor = tmpColor;
+    //         console.log(anotherColor);
+    //     }
+    //
+    //     inner();
+    // }
+    // outer();
+    // console.log(color);
+
+    var a=10;
+    function f() {
+         var a=20;
+        function f1() {
+            // console.log(a);
+            a=30;
+        }
+        f1();
+        console.log(a);//30
+    }
+    f();
+    alert(a);//10
+
+</script>
+</body>
+</html>

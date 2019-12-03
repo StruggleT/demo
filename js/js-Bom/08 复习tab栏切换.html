@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            /*border: 1px solid red;*/
+            margin: 100px;
+        }
+        #header{
+
+            width: 300px;
+            overflow: hidden;
+        }
+        #header li{
+            background-color: purple;
+            height: 30px;
+            margin-right: 40px ;
+            cursor: pointer;
+        }
+        #header .current{
+            background-color: yellow;
+        }
+        #body{
+            width: 300px;
+            height: 250px;
+            background-color: yellow;
+            overflow: hidden;
+        }
+        #body li {
+            height: 250px;
+            display: none;
+        }
+        #body .current{
+            display: block;
+        }
+        .current{
+
+           background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="header">
+        <ul>
+            <li class="current">新闻</li>
+            <li>体育</li>
+            <li>娱乐</li>
+            <li>健康</li>
+        </ul>
+    </div>
+    <div id="body">
+        <ul>
+            <li class="current">我是新闻</li>
+            <li>我是体育</li>
+            <li>我是娱乐</li>
+            <li>我是健康</li>
+        </ul>
+    </div>
+</div>
+<script src="common.js"></script>
+<script>
+    var header=my$("header");
+    var ulObj=header.children[0];
+    var liObj=ulObj.children;
+    var ulObj2=my$("body").children[0];
+    var list = ulObj2.children;
+    for (var i=0;i<liObj.length;i++){
+        liObj[0].className="current";
+        liObj[i].index=i;
+        liObj[i].onclick=function () {
+        //排他功能
+            for (var j=0;j<liObj.length;j++){
+                liObj[j].className="";
+                list[j].className="";
+            }
+            this.className="current";
+            list[this.index].className="current";
+        };
+    }
+</script>
+</body>
+</html>
